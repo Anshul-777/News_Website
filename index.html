@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news, videos, and live updates from around the world">
+    <meta name="author" content="NewsChannel">
+    <title>NewsChannel | Latest Breaking News</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Breaking News Ticker -->
+    <div class="breaking-news">
+        <div class="breaking-news-label">BREAKING:</div>
+        <div class="breaking-news-content">
+            <span>Major breakthrough in renewable energy announced • Global markets react to new economic policies • Scientists discover potential cure for rare disease</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">News<span>Channel</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#live"><i class="fas fa-broadcast-tower"></i> Live</a></li>
+                    <li><a href="#categories"><i class="fas fa-tags"></i> Categories</a></li>
+                    <li><a href="#articles"><i class="fas fa-newspaper"></i> Articles</a></li>
+                    <li><a href="#videos"><i class="fas fa-play-circle"></i> Videos</a></li>
+                    <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="user-btn"><i class="fas fa-user"></i></button>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for news, videos, articles...">
+            <button class="search-close"><i class="fas fa-times"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#live"><i class="fas fa-broadcast-tower"></i> Live</a></li>
+            <li><a href="#categories"><i class="fas fa-tags"></i> Categories</a></li>
+            <li><a href="#articles"><i class="fas fa-newspaper"></i> Articles</a></li>
+            <li><a href="#videos"><i class="fas fa-play-circle"></i> Videos</a></li>
+            <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <span class="category-tag global">Global</span>
+                        <h1>World Leaders Gather for Climate Summit</h1>
+                        <p>Representatives from over 100 countries meet to discuss urgent climate action plans and set new emission targets.</p>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/placeholder-hero1.jpg" alt="World leaders at climate summit">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <span class="category-tag technology">Technology</span>
+                        <h1>New AI Breakthrough Changes Everything</h1>
+                        <p>Researchers develop revolutionary AI model that can predict complex protein structures with unprecedented accuracy.</p>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/placeholder-hero2.jpg" alt="AI technology breakthrough">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <span class="category-tag sports">Sports</span>
+                        <h1>Championship Finals Set After Dramatic Semis</h1>
+                        <p>Underdog team advances to finals after stunning overtime victory against defending champions.</p>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/placeholder-hero3.jpg" alt="Sports championship finals">
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Layout -->
+        <div class="content-layout">
+            <div class="main-column">
+                <!-- Latest News Section -->
+                <section class="section latest-news">
+                    <div class="section-header">
+                        <h2>Latest News</h2>
+                        <div class="section-actions">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle">Sort by: Newest <i class="fas fa-chevron-down"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#" data-sort="newest">Newest First</a>
+                                    <a href="#" data-sort="oldest">Oldest First</a>
+                                    <a href="#" data-sort="popular">Most Popular</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-grid" id="latest-news-container">
+                        <!-- Articles will be loaded here via JavaScript -->
+                    </div>
+                    <button class="load-more">Load More Stories</button>
+                </section>
+
+                <!-- Trending Videos Section -->
+                <section class="section trending-videos">
+                    <div class="section-header">
+                        <h2>Trending Videos</h2>
+                        <div class="section-actions">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle">Category: All <i class="fas fa-chevron-down"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#" data-category="all">All Categories</a>
+                                    <a href="#" data-category="news">News</a>
+                                    <a href="#" data-category="technology">Technology</a>
+                                    <a href="#" data-category="sports">Sports</a>
+                                    <a href="#" data-category="entertainment">Entertainment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="videos-grid" id="trending-videos-container">
+                        <!-- Videos will be loaded here via JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Weather Widget -->
+                <div class="widget weather-widget">
+                    <div class="widget-header">
+                        <h3>Weather</h3>
+                        <button class="refresh-weather"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                    <div class="weather-content">
+                        <div class="weather-current">
+                            <div class="weather-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>New York, NY</span>
+                            </div>
+                            <div class="weather-info">
+                                <div class="weather-icon">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="weather-temp">
+                                    <span class="temp">72</span>
+                                    <span class="unit">°F</span>
+                                </div>
+                            </div>
+                            <div class="weather-desc">Sunny</div>
+                        </div>
+                        <div class="weather-forecast">
+                            <div class="forecast-day">
+                                <div class="day">Mon</div>
+                                <div class="icon"><i class="fas fa-sun"></i></div>
+                                <div class="temp">74°</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Tue</div>
+                                <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                                <div class="temp">68°</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Wed</div>
+                                <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                                <div class="temp">62°</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Thu</div>
+                                <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                                <div class="temp">70°</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Fri</div>
+                                <div class="icon"><i class="fas fa-sun"></i></div>
+                                <div class="temp">76°</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Tags -->
+                <div class="widget trending-tags">
+                    <div class="widget-header">
+                        <h3>Trending Tags</h3>
+                    </div>
+                    <div class="tags-container">
+                        <a href="#" class="tag">#ClimateChange</a>
+                        <a href="#" class="tag">#Election2024</a>
+                        <a href="#" class="tag">#TechInnovation</a>
+                        <a href="#" class="tag">#MarketWatch</a>
+                        <a href="#" class="tag">#HealthUpdate</a>
+                        <a href="#" class="tag">#SpaceExploration</a>
+                        <a href="#" class="tag">#SportsNews</a>
+                        <a href="#" class="tag">#Entertainment</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="widget newsletter-widget">
+                    <div class="widget-header">
+                        <h3>Stay Updated</h3>
+                    </div>
+                    <div class="newsletter-content">
+                        <p>Subscribe to our newsletter for daily news updates delivered to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Recommended Articles -->
+                <div class="widget recommended-articles">
+                    <div class="widget-header">
+                        <h3>Recommended For You</h3>
+                    </div>
+                    <div class="recommended-list">
+                        <div class="recommended-item">
+                            <div class="recommended-image">
+                                <img src="assets/images/placeholder-small1.jpg" alt="Recommended article">
+                            </div>
+                            <div class="recommended-content">
+                                <a href="#" class="recommended-title">How Remote Work is Changing Urban Economies</a>
+                                <div class="recommended-meta">
+                                    <span class="category business">Business</span>
+                                    <span class="time">2h ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended-item">
+                            <div class="recommended-image">
+                                <img src="assets/images/placeholder-small2.jpg" alt="Recommended article">
+                            </div>
+                            <div class="recommended-content">
+                                <a href="#" class="recommended-title">New Study Reveals Benefits of Mediterranean Diet</a>
+                                <div class="recommended-meta">
+                                    <span class="category health">Health</span>
+                                    <span class="time">5h ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended-item">
+                            <div class="recommended-image">
+                                <img src="assets/images/placeholder-small3.jpg" alt="Recommended article">
+                            </div>
+                            <div class="recommended-content">
+                                <a href="#" class="recommended-title">Upcoming Smartphones to Watch in 2024</a>
+                                <div class="recommended-meta">
+                                    <span class="category technology">Tech</span>
+                                    <span class="time">8h ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Live Ticker Section -->
+        <section class="live-ticker-section">
+            <div class="section-header">
+                <h2>Live Updates</h2>
+                <div class="live-label">
+                    <span class="live-dot"></span>
+                    <span>LIVE</span>
+                </div>
+            </div>
+            <div class="live-ticker-container">
+                <div class="live-ticker">
+                    <div class="ticker-item">
+                        <span class="ticker-time">10:45 AM</span>
+                        <span class="ticker-content">Stock markets open higher amid positive earnings reports</span>
+                    </div>
+                    <div class="ticker-item">
+                        <span class="ticker-time">10:32 AM</span>
+                        <span class="ticker-content">Transportation strike enters third day, affecting major cities</span>
+                    </div>
+                    <div class="ticker-item">
+                        <span class="ticker-time">10:18 AM</span>
+                        <span class="ticker-content">Scientists announce discovery of new dinosaur species</span>
+                    </div>
+                    <div class="ticker-item">
+                        <span class="ticker-time">10:05 AM</span>
+                        <span class="ticker-content">International talks resume on nuclear disarmament</span>
+                    </div>
+                    <div class="ticker-item">
+                        <span class="ticker-time">9:52 AM</span>
+                        <span class="ticker-content">Tech giant unveils revolutionary battery technology</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">News<span>Channel</span></div>
+                <p class="footer-description">Delivering accurate, timely news from around the globe 24/7. Our mission is to inform, educate, and empower our audience.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Ethics Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Subscribe</h4>
+                <p>Get the latest news delivered to your inbox daily.</p>
+                <form class="footer-newsletter">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="footer-apps">
+                    <p>Download our app:</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-store">
+                            <i class="fab fa-apple"></i>
+                            <span>App Store</span>
+                        </a>
+                        <a href="#" class="google-play">
+                            <i class="fab fa-google-play"></i>
+                            <span>Google Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2024 NewsChannel. All rights reserved.</p>
+                <div class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="auth-submit">Login</button>
+                </form>
+                <div class="auth-switch">
+                    <p>Don't have an account? <a href="#" class="switch-to-register">Register</a></p>
+                </div>
+                <div class="auth-social">
+                    <p>Or login with:</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                        <button class="social-btn twitter"><i class="fab fa-twitter"></i> Twitter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Create Your Account</h3>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirm Password</label>
+                        <input type="password" id="register-confirm" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="terms-agree" required>
+                        <label for="terms-agree">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="auth-submit">Register</button>
+                </form>
+                <div class="auth-switch">
+                    <p>Already have an account? <a href="#" class="switch-to-login">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Modal -->
+    <div class="modal" id="newsletter-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get the latest news and updates delivered to your inbox</p>
+            </div>
+            <div class="modal-body">
+                <form class="newsletter-modal-form">
+                    <div class="form-group">
+                        <label for="newsletter-name">Name</label>
+                        <input type="text" id="newsletter-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newsletter-email">Email</label>
+                        <input type="email" id="newsletter-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Newsletter Preferences</label>
+                        <div class="preference-options">
+                            <div class="preference-option">
+                                <input type="checkbox" id="pref-daily" checked>
+                                <label for="pref-daily">Daily Digest</label>
+                            </div>
+                            <div class="preference-option">
+                                <input type="checkbox" id="pref-breaking">
+                                <label for="pref-breaking">Breaking News</label>
+                            </div>
+                            <div class="preference-option">
+                                <input type="checkbox" id="pref-weekly">
+                                <label for="pref-weekly">Weekly Roundup</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="newsletter-submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal" id="share-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Share This Story</h3>
+            </div>
+            <div class="modal-body">
+                <div class="share-options">
+                    <a href="#" class="share-option facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="share-option twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="share-option linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="share-option whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" class="share-option email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+                <div class="share-link">
+                    <label for="share-url">Or copy link</label>
+                    <div class="link-container">
+                        <input type="text" id="share-url" value="https://newschannel.com/story/12345" readonly>
+                        <button class="copy-link">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CMS Modal -->
+    <div class="modal" id="cms-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Add New Content</h3>
+                <div class="cms-tabs">
+                    <button class="cms-tab active" data-tab="article">Article</button>
+                    <button class="cms-tab" data-tab="video">Video</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form class="cms-form" id="article-form">
+                    <div class="form-group">
+                        <label for="article-title">Title</label>
+                        <input type="text" id="article-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-category">Category</label>
+                        <select id="article-category" required>
+                            <option value="">Select category</option>
+                            <option value="world">World</option>
+                            <option value="politics">Politics</option>
+                            <option value="business">Business</option>
+                            <option value="technology">Technology</option>
+                            <option value="science">Science</option>
+                            <option value="health">Health</option>
+                            <option value="sports">Sports</option>
+                            <option value="entertainment">Entertainment</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-image">Image URL</label>
+                        <input type="text" id="article-image" placeholder="https://example.com/image.jpg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-content">Content</label>
+                        <textarea id="article-content" rows="8" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-tags">Tags (comma separated)</label>
+                        <input type="text" id="article-tags" placeholder="tag1, tag2, tag3">
+                    </div>
+                    <div class="form-group">
+                        <label for="article-author">Author</label>
+                        <input type="text" id="article-author" required>
+                    </div>
+                    <button type="submit" class="cms-submit">Publish Article</button>
+                </form>
+
+                <form class="cms-form hidden" id="video-form">
+                    <div class="form-group">
+                        <label for="video-title">Title</label>
+                        <input type="text" id="video-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="video-category">Category</label>
+                        <select id="video-category" required>
+                            <option value="">Select category</option>
+                            <option value="news">News</option>
+                            <option value="technology">Technology</option>
+                            <option value="sports">Sports</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="video-url">Video URL</label>
+                        <input type="text" id="video-url" placeholder="https://youtube.com/embed/..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="video-thumbnail">Thumbnail URL</label>
+                        <input type="text" id="video-thumbnail" placeholder="https://example.com/thumbnail.jpg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="video-description">Description</label>
+                        <textarea id="video-description" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="video-tags">Tags (comma separated)</label>
+                        <input type="text" id="video-tags" placeholder="tag1, tag2, tag3">
+                    </div>
+                    <div class="form-group">
+                        <label for="video-duration">Duration (minutes)</label>
+                        <input type="number" id="video-duration" min="1" required>
+                    </div>
+                    <button type="submit" class="cms-submit">Upload Video</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="notification-toast">
+        <div class="toast-content">
+            <div class="toast-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast-message">
+                <p>Article saved to your bookmarks</p>
+            </div>
+            <button class="toast-close"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/articles.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/live.js"></script>
+    <script src="js/community.js"></script>
+    <script src="js/cms.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
